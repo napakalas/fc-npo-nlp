@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fc-npo-nlp"
+version = "0.1.0"
+description = ""
+authors = ["napakalas <yuda.munarko@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fc_npo_nlp"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+npoexplorer = {url = "https://github.com/napakalas/npo_explorer/releases/download/v0.0.2-gamma/npoexplorer-0.0.2-py3-none-any.whl"}
+sentence-transformers = "^2.2.2"
+
+[tool.poetry.scripts]
+fcnponlp = 'fc_npo_nlp.__main__:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
